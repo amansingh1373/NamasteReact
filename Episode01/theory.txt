@@ -1,0 +1,34 @@
+● What is Emmet?
+    Emmet is like an application pre installed in vscode that provides boilerplate code for various languages
+● Difference between a Library and Framework?
+    - solve common problems easier way(or prebuild those common problems solution(example: a code that splits a sentence))
+    - techinichal difference is INVERSION OF CONTROL: when using a library we have the control over flow when to execute and how to execute whereas in case of framework, framework has the control of the flow and we can plugin our code
+    - framework are more opinionated(as there is less control of the flow) whereas libraries are less opinionated
+    - framework is heavy and has its own way of doing things, it has built in plugins for external support, whereas library is just an add on feature to an exisiting language
+● What is CDN? Why do we use it?
+    CDN is content delivery network, it is like a service which is responsible for connectivity and content transportation. CDN(cloudflare, amazon cloudfront) provides geographically located servers that caches reponses from the origin server in the datacenter and are responsible to send requested data to the client
+    - prevent DDos attacks(Security)
+    - fast delivery(planned position of servers and data center, caching of responses)
+● Why is React known as React?
+    dont know
+● What is crossorigin in script tag?
+    crossorigin is of two types anonymous and credentials, so basically requesting for a file from different origin(server,location) this is like the security check whether the file should be provided or not
+● What is diference between React and ReactDOM
+    React provides the basic functionality to create elements basically create html elements(they are objects but on further processing they change to html elements) to show on the browser, ReactDOM provides functionality to manipulate DOM 
+    This division is mainly done because of keeping react platform independent
+    react deals with core react philosophies of making reusable UI component
+    whereas reactDOM deals with web browsers DOM mainpulation
+    there are other such as reactNative for mobile platforms and reactVR etc. 
+● What is difference between react.development.js and react.production.js files via CDN?
+    there are two steps 
+        1. development  
+        2. production
+    both of the phases need different tools and different needs
+        - in production we might want performance and no error handling tools which makes the error readable
+        - where as in developement we might need debugging 
+        - sourcemaps are present in the production phase whereas it is not present in the development phase whole work of this sourcemap is to map original code with minified code for better debugging
+● What is async and defer?
+    async and defer are attributes that can be set to script tag 
+    1. async -> makes the js files fetching parallel to html parsing when fetched the it will be immidieately executed leaving html parsing blocked for execution time
+    2. defer -> js file is downloaded parallely but executed after all the html rendering is completed
+    attached a photo for better understanding async_defer.png
