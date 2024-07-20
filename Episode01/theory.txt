@@ -1,5 +1,17 @@
 ● What is Emmet?
-    Emmet is like an application pre installed in vscode that provides boilerplate code for various languages
+    Snippets are predefined code by us which we can use later, it cannot be changed at runtime, the code inside of these Snippets cannot be changed on the go, to address this issue emmet comes into picture it has a CSS like syntax and can generate tags based on these selectors
+    - ">" -> child selector
+    - "^" -> climb up
+    - "+" -> sibling
+    - "*" -> multiplication
+    - "." -> classname
+    - "#" -> id
+    - ".classname$*5" - numbering
+    - ".classname$a-*5" - reverse numbering
+    - ".classname$a3*5" - numbering start(in this case 3)
+    - "()" - grouping
+    - "[]" - custom attributes
+    - "{}" - custom text 
 ● Difference between a Library and Framework?
     - solve common problems easier way(or prebuild those common problems solution(example: a code that splits a sentence))
     - techinichal difference is INVERSION OF CONTROL: when using a library we have the control over flow when to execute and how to execute whereas in case of framework, framework has the control of the flow and we can plugin our code
@@ -10,9 +22,15 @@
     - prevent DDos attacks(Security)
     - fast delivery(planned position of servers and data center, caching of responses)
 ● Why is React known as React?
-    dont know
+    As it reacts only to the changes in props or components. react is responsive this is called reacts "reactivity", it does not only respond to changes in props and components it does so very efficiently with an algorithm called "react fiber". 
 ● What is crossorigin in script tag?
-    crossorigin is of two types anonymous and credentials, so basically requesting for a file from different origin(server,location) this is like the security check whether the file should be provided or not
+    - crossorigin is of two types anonymous and credentials, so basically requesting for a file from different origin(server,location) this is like the security check whether the file should be provided or not
+    - crossorigin is an attribute that lets us use cors header in the request so that we can get the data from the different origin
+    - CORS - cross origin resource sharing 
+        - header based mechanism to let server indicate which all origin is allowed, if the browser request would be allowed to the server to fetch the files or data
+        - browser sends a "preflight" request to the server to get to know whether it will allow the browser origin to fetch data 
+        - fetch and XMLHttprequest has same origin policy, that is the browser can only request data from the same origin unless CORS header is defined correctly then it can access crossorigin resources
+        - To access cross origin resources CORS header must be configured and to configure this CORS header cross origin attribute is used
 ● What is diference between React and ReactDOM
     React provides the basic functionality to create elements basically create html elements(they are objects but on further processing they change to html elements) to show on the browser, ReactDOM provides functionality to manipulate DOM 
     This division is mainly done because of keeping react platform independent
