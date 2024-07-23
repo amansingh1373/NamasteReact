@@ -1,0 +1,45 @@
+● - What is `NPM`?
+    -> NPM is registry for software packages
+    -> NPM has three distinct components
+        1. website
+        2. registry
+        3. CLI
+    -> npm is used to share and use various js packages
+    -> npm through cli helps to manage the packages like install and uninstall
+● - What is `Parcel/Webpack`? Why do we need it?
+    -> parcel/webpack are bundlers
+        - bundlers are packages that helps to do preprocessing for our code before sending it to production, these bundlers also help in providing tools for a very nice development environment(dev-server, minification of code, optimization)
+● - What is `.parcel-cache`
+    -> parcel-cache is used to cache the existing modules of a project, caching is used to make the build and reload faster
+    -> parcel automatically watches for changes in the code and change only that part of the code with the help of caching
+    -> there are different cli options in parcel for changing directory of the cached file or not storing cached file at all
+● - What is `npx` ?
+    -> when we install node npm comes along with it, npm does is install or uninstall packages from the existing registry, to run those packages we need to go to node_modules/package_name/bin something like this to run the package
+    -> what npx does is it downloads the package temporarily and executes the package simultaneously.
+● - What is difference between `dependencies` vs `devDependencies`
+    -> dependencies are packages installed, devDependencies are those dependencies that we might only need for developement purpose and not for production, where as the normal dependencies are those which are essential and needed for production of the app.
+● - What is Tree Shaking?
+● - What is Hot Module Replacement?
+● - List down your favourite 5 superpowers of Parcel and describe any 3 of them in your
+own words.
+● - What is `.gitignore`? What should we add and not add into it?
+    -> sometimes we dont need every files or folder to be pushed in git, there can be many reasons such as private_data or data that can be again generated such as node_modules folder
+    -> for these reasons /gitignore file is there as it keeps track of files thatt should not be tracked with git.
+● - What is the difference between `package.json` and `package-lock.json`
+    -> package.json contains configuration for the application that we are creating all the package and different things
+    -> package.json files doesnt keep track of the version of packages, the packages can be upgraded if there is a caret or tilde, package.lock.json contains details of packages exact version that is being used in the application.
+    -> package.lock.json contains "integrity" attribute for each of the packages details, integrity attribute is for checking whether the downloaded package and the package used to build the app has the exact same content, this helps protecting from malicious attacks and also keep in check whether same version are used in production and development.
+● - Why should I not modify `package-lock.json`?
+
+● - What is `node_modules` ? Is it a good idea to push that on git?
+    -> node_modules is a very big file containing all the packages downloaded from the registry that are needed for the project, and to push such a big file to git can be time taking and the major reason for not pushing it would be that all the details for generating the node_modules file is already present in the package.json so we can generate the node_modules folder anytime if we have package.json
+● - What is the `dist` folder?
+    -> dist folder contains the final minfied and optimized code for production or development, there are three files generated 
+        1. index.html
+        2. index.css
+        3. index.js
+    these containst all the code of the application
+● - What is `browserlists`
+Read about dif bundlers: vite, webpack, parcel
+● - Read about: ^ - caret and ~ - tilda
+● - Read about Script types in html (MDN Docs)
