@@ -1,0 +1,20 @@
+● What is JSX?
+    JSX stands for javascript XML
+    - html like syntax for creating complicated react element object
+    - jsx -> converted to react object with the help of babel -> then is converted to js
+● Superpowers of JSX
+    - run any peice of js with the help of {} 
+    - readability
+    - checks for injection or sanitizes the data before executing it or prevent cross site scripting 
+● Role of type attribute in script tag? What options can I use there?
+    type attribute tell the type of file used(how to treat the file in the src tag)
+    other options:
+    -> Javascript MIMEtype or default
+    -> importmap -> a json map which tell which module is where, where to load the module from
+    -> module -> script is in the form of js module and would use CORS
+    -> speculationrule -> telling what to prerender and what to prefetch
+    -> datablock -> any invalid value other than the above 4 would lead to this, this just would act as a data carrier the things inside wont be executed as javascript
+● {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+    - {TitleComponent()} - This is like calling normal js function which would render the html exactly but React would not have full control over it.
+    - <TitleComponent /> - correct way of using functional component React is responsible for its life cycle
+    - <TitleComponent> </TitleComponent> - according to chatgpt this is incorrect way of creating functional compoenent

@@ -1,0 +1,66 @@
+body,html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1vw;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem 1rem 4rem;
+  background-color: rgb(22 30 36 / 100%);
+}
+
+.nav-logo {
+  
+  width: 3rem;
+}
+
+.nav-search-bar {
+  width: 30%;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+}
+
+.nav-search-input {
+  min-width: 0;
+  flex: 1 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.nav-search-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-user {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  color: rgb(22 30 36 / 100%);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
