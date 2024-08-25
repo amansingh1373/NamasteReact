@@ -40,6 +40,7 @@ own words.
         3. index.js
     these containst all the code of the application
 ● - What is `browserlists`
+    
 Read about dif bundlers: vite, webpack, parcel
 ● - Read about: ^ - caret and ~ - tilda
 ● - Read about Script types in html (MDN Docs)

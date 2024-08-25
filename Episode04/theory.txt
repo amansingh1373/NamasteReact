@@ -1,0 +1,104 @@
+● Is JSX mandatory for React?
+    JSX is just a syntactic sugar for React.createElement(), JSX has its own advantages like preventing XSS attack and better code readability, but it is not mandatory for React since we can just createElement with the help of React.createElement. Imp point to note here is the JSX is also converted to this react createElement, this is before react 17 now babel actually uses some helper functions _jsx() which is used to create react element and this is the more efficient way.
+● Is ES6 mandatory for React?
+    A simple answer is no ES6 is not mandatory for react.
+	{
+		title:"how will we create react class"
+		with: "extend React.component",
+		without: "using the method provided by react createReactClass"
+	},
+	{
+		title:"declaring default props",
+		with:"define a property in the class named defaultProps",
+		without:"define a function getDefaultProps which returns object",
+	},
+	{
+		title:"setting the inital state",
+		with:"define this.state = {statename: props.intialStateName} in the constructor",
+		without:"define a function getInitialState which returns an object",
+	},
+	{
+		title:"autobinding",
+		description: "when a function declared in a class is passed as a callback it is not sure that it will maintain the same this context."
+		with:"in constructor we need to define this.functionName = this.functionName.bind(this)",
+		without:"create react class takes care of that",
+	}
+        return JSX_code;
+    }
+    and inside JSX if we want to perform any peice of js, we can use '{}', so simply calling {TitleComponent()} would also result in rendering of TitleComponent, the difference is with <TitleComponent /> is that it wont be tracked by react for efficient manipulation.
+    <TitleComponent /> this is JSX way of calling a component this eventually compiles to React.createElement(tag, ...props, children)
+    <TitleComponent></TitleComponent> this also is same way for calling out a component, this is used when we want to send something in props.children, anything we place inside of the tags would be passed to the component as children and can be accessed as props.children
+● How can I write comments in JSX?
+    JSX is compiled to js and when we are using jsx peice of code and we want to have comment we can simply have {/**/} this as comment, if we want to place comment outside of the jsx code we can do // for single line comment and /**/ this is for multi-line comment.
+    Example:
+    import something from 'example'
+    //Comment here
+    /*Other long
+    * Comment here
+    */
+    const JSX = (
+        <div>
+            {/* I'm a comment */}
+            Hey there
+        </div>
+    )
+● What is <React.Fragment></React.Fragment> and <></> ?
+    these are used for grouping elements together and not actually adding an extra element in the DOM.
+    There are also keyed fragment, which are used when we want to cluster a group of element and provide them a wrapper and that wrapper should'nt exist and also should has a key parameter for react for effiecient change in the DOM.
+● What is Virtual DOM?
+● What is Reconciliation in React?
+● What is React Fiber?
+● Why we need keys in React? When do we need keys in React?
+● Can we use index as keys in React?
+● What is props in React? Ways to
+● What is a Config Driven UI ?
+
+- why do we need to add {} two of them for sending props
+
+
+/*
+1.Arrow functions do not have their own "this" context instead they point to the context in which they were defined, whereas traditional functions have their own "this" context.
+	ex:
+	const obj = {
+		value: "Aman Singh",
+		getValue: function() {
+			console.log(this.value)
+		}
+	}
+	obj.getValue()
+	this would give Aman Singh as output
+	const obj = {
+		value: "Aman Singh",
+		getValue: () => {
+			console.log(this.value)
+		}
+	}
+	obj.getValue()
+	this would give undefined as output
+
+2. lexical scopes in js are made by function, module, global environment not by objects.
+
+3. when we pass a function as a callback then we have to explicitly bind it to the object or function or class for it to have "this" context otherwise using arrow function would do the trick
+	class MyClass {
+		constructor(a) {
+			this.value = a;
+		}
+		getValue() {
+			console.log(this.value)		
+		}
+		render() {
+			f(this.getValue);
+		}
+	}
+	function f(g) {
+		g();
+	}
+	let o = new MyClass("Aman Singh")
+	o.getValue() // this will give me Aman Singh as output
+	o.render() // this will give me undefined as output
+	HOW TO BIND?
+	constructor(a) {
+		this.value = a;
+		this.getValue = this.getValue.bind(this); // this will bind it always to the instance of the class created
+	}
+*/

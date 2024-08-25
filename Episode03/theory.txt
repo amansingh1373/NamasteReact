@@ -17,4 +17,4 @@
 ● {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
     - {TitleComponent()} - This is like calling normal js function which would render the html exactly but React would not have full control over it.
     - <TitleComponent /> - correct way of using functional component React is responsible for its life cycle
-    - <TitleComponent> </TitleComponent> - according to chatgpt this is incorrect way of creating functional compoenent
+    - <TitleComponent> </TitleComponent> - according to chatgpt this is incorrect way of creating functional component
