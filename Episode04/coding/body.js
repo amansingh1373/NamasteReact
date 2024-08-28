@@ -1,16 +1,26 @@
 import ResCard from "./res-card";
-import {resData} from './res-data';
+import { useState } from "react";
+import {resData as importedResData} from './res-data';
 
 const SearchInput = () => {
     return ( 
-        <h1>This is Search component</h1>
-     );
+        <div>This is search component</div>
+    );
 }
 
 const Body = () => {
+    const [resData, setResData] = useState(importedResData);
+    onClickHandler = () => {
+        const resDataTemp = resData.filter((res) => {
+            return res.info.avgRating >= 4;
+        });
+        setResData(resDataTemp);
+    }
     return ( 
         <div>
             <SearchInput />
+
+            <button onClick={onClickHandler}>4+ rating</button>    
             <div className="res-container">
                 {resData.map((restrauntDetails) => {
                     console.log(restrauntDetails);
